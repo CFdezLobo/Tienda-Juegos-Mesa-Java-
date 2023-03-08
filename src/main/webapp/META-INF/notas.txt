@@ -1,0 +1,2 @@
+Directorio de subidas:
+C:\eclipse\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\tiendaJuegosMesaHibernate\subidas

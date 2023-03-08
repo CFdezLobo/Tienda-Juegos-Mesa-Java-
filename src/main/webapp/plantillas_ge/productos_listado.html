@@ -1,0 +1,20 @@
+{{#.}}
+	<div class="card col" style="margin: 1rem; cursor:pointer;">
+		<div id_producto="{{id}}" class="enlace_detalles" style="display: flex;justify-content:center; margin-top: 2rem;">
+			<object style="height: 150px;" data="subidas/juegos/{{id}}-1.jpg?fai={{fechaImagenPortada}}">
+				<img style="height: 150px;" src="subidas/juegos/juego.png"/>	
+			</object>
+<!-- 			<object style="height: 100px;" data="subidas/juegos/{{id}}-2.jpg?fai={{juego.fechaImagenContraPortada}}"> -->
+<!-- 				<img style="height: 100px;" src="subidas/juegos/juego.png"/> -->
+<!-- 			</object> -->
+		</div>
+		<div id_producto="{{id}}" class="enlace_detalles card-body">
+			<h4 class="card-title" style="text-align:center;">{{nombre}}</h4>
+			<h5 id="precio" class="card-title" style="text-align:center;">{{precio}} €</h5>
+		</div>
+		<div style="display: flex;justify-content: center; padding-bottom: 1.5rem;">
+			<input class="inputCantidad" type="number" id="input-cantidad-{{id}}" value="1" min="1" style="width:3em;margin:10px;text-align: center;"/>
+			<a href="#" id_producto="{{id}}" class="enlace_comprar btn btn-primary" style="margin:10px;">Kaufen</a>
+		</div>
+	</div>
+{{/.}}

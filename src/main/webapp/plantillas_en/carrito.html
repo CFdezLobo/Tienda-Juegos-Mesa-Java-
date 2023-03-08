@@ -1,0 +1,40 @@
+<div style="text-align: center; margin: 1rem;">
+	<h1>Cart</h1>
+</div>
+
+<div class="row row-cols-5 gx-0" style="justify-content:center;">
+{{#.}}
+<div class="card col" style="margin: 1rem; cursor:pointer; border: none!important;">
+	<div id_producto="{{juego_id}}" class="enlace_detalles" style="display: flex;justify-content:center; margin-top: 2rem;">
+			<object style="height: 150px;" data="subidas/juegos/{{juego_id}}-1.jpg?fai={{fechaImagenPortada}}">
+				<img style="height: 150px;" src="subidas/juegos/juego.png"/>	
+			</object>
+		</div>
+		<div id_producto="{{juego_id}}" class="enlace_detalles card-body">
+			<h4 class="card-title" style="text-align:center;">{{nombre}} </h4>
+			<h5 id="precio" class="card-title" style="text-align:center;">{{precio}} €</h5>
+		</div>
+			<ul class="list-group list-group-flush" style="text-align: start; padding: 1rem;">
+				<li class="list-group-item"> <span id="tituloEspecificacion"> Players: </span> {{nJugadores}} players </li>
+				<li class="list-group-item"> <span id="tituloEspecificacion"> Duration: </span> {{duracion}} min.</li>
+				<li class="list-group-item"> <span id="tituloEspecificacion"> Dificulty: </span> {{dificultad}} </li>
+				<li class="list-group-item"> <span id="tituloEspecificacion"> Category: </span> {{categoria}} </li>
+				<li class="list-group-item"> <span id="tituloEspecificacion"> Language: </span> {{idioma}} </li>
+				<li class="list-group-item"> <span id="tituloEspecificacion"> Amount: </span>
+					<input type="number" id="input-cantidad-{{juego_id}}" id_producto="{{juego_id}}" class="input_cantidad" value="{{cantidad}}" min="1" style="width:3em;text-align: center;"/>
+				</li>
+			</ul>
+		<div style="text-align:center; padding-bottom: 1.5rem;">
+			 <a href="#" class="enlace_borrar_producto btn btn-primary" id-producto="{{juego_id}}">
+            	Delete
+        	</a>
+		</div>
+</div>
+{{/.}}
+</div>
+
+<div style="text-align: center;margin: 30px;font-size: 1.5em;">
+    <a class="btn btn-primary" href="#" id="realizar_pedido" style="width: 20%;height: 50px;font-size: 1.3rem;font-weight: 600;">ORDER</a>
+</div>
+
+

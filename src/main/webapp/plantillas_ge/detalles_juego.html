@@ -1,0 +1,67 @@
+{{#.}}
+<div class="container mt-5 mb-5" style="margin-top:6rem!important;">
+	<div class="card detallesProducto">
+		<div class="row g-0">
+			<div class="col-md-6 border-end">
+				<div class="d-flex flex-column justify-content-center">
+					<div class="main_image">
+						<img id="main_product_image" src="subidas/juegos/{{id}}-1.jpg?fai={{fechaImagenPortada}}" width="350"/>
+					</div>
+					<div class="thumbnail_images">
+						<ul id="thumbnail" style="padding-left:0;">
+							<li>
+								<img style="height: 100px;" src="subidas/juegos/{{id}}-1.jpg?fai={{fechaImagenPortada}}" onclick="changeImage(this)" width="100"/>
+							</li>
+							<li>
+								<img style="height: 100px;" src="subidas/juegos/{{id}}-2.jpg?fai={{juego.fechaImagenContraPortada}}" onclick="changeImage(this)" width="100"/>
+							</li>
+							<li>
+								<img style="height: 100px;" src="subidas/juegos/{{id}}-3.jpg?fai={{juego.fechaImagenJuegoDesplegado1}}" onclick="changeImage(this)" width="100"/>
+							</li>
+							<li>
+								<img style="height: 100px;" src="subidas/juegos/{{id}}-4.jpg?fai={{juego.fechaImagenJuegoDesplegado1}}" onclick="changeImage(this)" width="100"/>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="p-3 right-side">
+					<div class="d-flex justify-content-between align-items-center">
+						<h3 style="margin-top:1rem;">{{nombre}}</h3>
+						<span class="heart"><i class='bx bx-heart'></i></span>
+					</div>
+					<div class="mt-2 pr-3 content">
+						<p>{{descripcion}}</p>
+					</div>
+					<h3 id="precio" style="margin-top:1.5rem;font-size: 2rem;">{{precio}} €</h3>
+					<div class="mt-5" style="text-align:start;margin-top:1rem!important;">
+						<span class="fw-bold"> Spezifikationen </span>
+						<ul class="list-group list-group-flush" style="margin-top:1rem;">
+							<li class="list-group-item">
+								<span id="tituloEspecificacion">Spieler:</span> {{nJugadores}} spieler							
+							</li>
+							<li class="list-group-item">
+								<span id="tituloEspecificacion">Dauer:</span> {{duracion}} min
+							</li>
+							<li class="list-group-item">
+								<span id="tituloEspecificacion">Schwierigkeit:</span> {{dificultad}}
+							</li>
+							<li class="list-group-item">
+								<span id="tituloEspecificacion">Kategorie:</span> {{categoria.nombre}}
+							</li>
+							<li class="list-group-item">
+								<span id="tituloEspecificacion">Sprache:</span> {{idioma}}
+							</li>
+						</ul>
+					</div>
+					<div class="buttons d-flex flex-row mt-5 gap-3" style="display:flex;justify-content:center;align-items:center;margin-top:1rem!important">
+						<input type="number" id="input-cantidad-{{id}}" value="1" min="1" style="width: 3em; margin: 10px;" /> 
+						<a href="#" id_producto="{{id}}" class="enlace_comprar btn btn-primary" style="margin: 10px;width: 50%;">Vergleich</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{/.}}

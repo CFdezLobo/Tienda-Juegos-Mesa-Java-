@@ -1,0 +1,141 @@
+<h3 style="text-align:center;margin-top:3rem;">MAKE AN ORDER - STEP 4</h3>
+
+<h4 style="text-align:center;margin-top:3rem;">Order summary:</h4>
+
+<div class="tab-content" id="nav-tabContent" style="margin: auto 3rem;text-align:start;padding: 1rem 5rem;">
+	<!-- Order Details -->	
+	<div class="tab-pane fade show active" id="order" role="tabpanel" aria-labelledby="nav-home-tab">
+		<div id="" role="tablist">
+			<div class="row ">
+				<div class="col-md-6">
+					<div class="card pedido">
+						<div class="card-header" role="tab" id="headingOne" data-bs-toggle="collapse" 
+						href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background:#0d6efd;">
+							<h5 class="mb-0" style="color:white;">
+								Products
+							</h5>
+						</div>
+						<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+							<div class="card-body row" style="cursor:auto;">
+								<div class="card-body row">
+									{{#juegos}}
+									<div class="col-6" style="cursor: auto;width: 60%;">
+										<div id_producto="{{juego_id}}" class="datosProducto">
+											<object style="height: 100px;" data="subidas/juegos/{{juego_id}}-1.jpg?fai={{fechaImagenPortada}}">
+												<img style="height: 100px;" src="subidas/juegos/juego.png">
+											</object>
+	    									<div id="contenedorDatosProducto">
+										    	<p style="font-weight:600;">{{nombre}}</p>
+										    	<p> <span style="font-weight:600;"> Amount: </span> <span> {{cantidad}} </span> </p>
+										    	<p> <span style="font-weight:600;"> Price/unity: </span> <span> {{precio}} € </span></p>
+										    </div>
+	    								</div>
+									</div>
+									<hr>
+									{{/juegos}}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card pedido">
+						<div class="card-header collapsed" role="tab" id="headingTwo" data-bs-toggle="collapse" 
+						href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="background:#0d6efd;">
+							<h5 class="mb-0" style="color:white;">
+								Shipping information
+							</h5>
+						</div>
+						<div id="collapseTwo" class="collapse show" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+							<div class="card-body detallesPedido"style="cursor:auto;">
+								<div class="card-body" >
+										<div class="form-group row campoPedido">
+											<label id="campoPedido" class="col-md-3 col-form-label">First name:</label>
+											<label class="col-md-4 col-form-label form-control labelPedido">{{nombre}}</label>
+										</div>
+										<div class="form-group row campoPedido">
+											<label id="campoPedido" class="col-md-3 col-form-label">Sure name: </label>
+											<label class="col-md-4 col-form-label form-control labelPedido">{{apellidos}}</label>
+										</div>
+										<div class="form-group row campoPedido">
+											<label id="campoPedido" class="col-md-3 col-form-label">Address:</label>
+											<label class="col-md-4 col-form-label form-control labelPedido">{{direccion}}</label>
+										</div>
+										<div class="form-group row campoPedido">
+											<label id="campoPedido" class="col-md-3 col-form-label">Deparment:</label>
+											<label class="col-md-4 col-form-label form-control labelPedido">{{provincia}}</label>
+										</div>
+										<div class="form-group row campoPedido">
+											<label id="campoPedido" class="col-md-3 col-form-label">Postal Code:</label>
+											<label class="col-md-4 col-form-label form-control labelPedido">{{cp}}</label>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card pedido">
+						<div class="card-header collapsed" role="tab" id="headingThree" data-bs-toggle="collapse" 
+						href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" style="background:#0d6efd;">
+							<h5 class="mb-0" style="color:white;" style="color:white;">
+								Payment info
+							</h5>
+						</div>
+						<div id="collapseThree" class="collapse show" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+							<div class="card-body detallesPedido" style="cursor:auto;">
+								<div class="form-group row campoPedido">
+									<label id="campoPedido" class="col-md-3 col-form-label">Card holder:</label>
+									<label class="col-md-4 col-form-label form-control labelPedido">{{titularTarjeta}}</label>
+								</div>
+								<div class="form-group row campoPedido">
+									<label id="campoPedido" class="col-md-3 col-form-label">Card number:</label>
+									<label class="col-md-4 col-form-label form-control labelPedido">{{numeroTarjeta}}</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card pedido" style="cursor: auto;">
+						<div class="card-header">
+							<div class="d-inline h4" style="color:white;">Order details</div>
+							<div class="d-inline float-right">
+								<small>
+									<a id="editarPedido" href="#" style="color:white;">Edit</a>
+								</small>
+							</div>
+						</div>
+						<div class="card-body detallesPedido">
+							<dl class="row">
+								<dd class="col-sm-4">Products:</dd>
+								<dt class="col-sm-8">{{nProductos}}</dt>
+								<dd class="col-sm-4">Delivery:</dd>
+								<dt class="col-sm-8">24-48 hours</dt>
+							</dl>
+							<dl class="row">
+								
+							</dl>
+							<dl class="row">
+								<dd class="col-sm-4">Discount coupon:</dd>
+								<dt class="col-sm-8">None</dt>
+								<dd class="col-sm-4">Shipping costs:</dd>
+								<dt class="col-sm-8">Free</dt>
+							</dl>
+							<dl class="row">
+								<dd class="col-sm-4">Total price</dd>
+								<dt class="col-sm-8">{{precioTotal}} €<br>
+								</dt>
+							</dl>
+							<hr>
+							<dl class="row">
+								<dt class="col-sm-12">Observations</dt>
+								<dd class="col-sm-12">{{observaciones}}</dd>
+							</dl>
+							<hr>
+							<div style="display:flex;justify-content:center;">
+								<button id="boton_confirmar_pedido" class="btn btn-primary" style="margin: 10px; padding: 10px;">CONFIRM</button>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>

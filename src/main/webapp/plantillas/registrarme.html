@@ -1,0 +1,108 @@
+<h4 style="text-align:center;margin-top:3rem;">Introduce tus datos:</h4>
+
+<div style="display:flex;justify-content:center;margin-top:3rem;">
+	<form id="form_registro_usuario" method="post" class="row g-3" style="width:50%;text-align: start;">
+		<div class="col-md-6">
+			<label for="inputEmail" class="form-label">Email</label> 
+			<input type="email" class="form-control" name="email" id="email">
+			<p id="mensajeError" class="mensajeEmail"></p>
+		</div>
+		<div class="col-md-6">
+			<label for="inputPassword" class="form-label">Contraseña</label> 
+			<input type="password" class="form-control" name="pass" id="pass">
+			<p id="mensajeError" class="mensajePass"></p>
+		</div>
+		<div class="col-md-6">
+			<label for="inputNombre" class="form-label">Nombre</label> 
+			<input type="text" class="form-control" name="nombre" id="nombre">
+			<p id="mensajeError" class="mensajeNombre"></p>
+		</div>
+		<div class="col-md-6">
+			<label for="inputApellidos" class="form-label">Apellidos</label> 
+			<input type="text" class="form-control" name="apellidos" id="apellidos">
+			<p id="mensajeError" class="mensajeApellidos"></p>
+		</div>
+		<div class="col-md-6">
+			<label for="inputDni" class="form-label">DNI</label> 
+			<input type="text" class="form-control" name="dni" id="dni" maxlength="9">
+			<p id="mensajeError" class="mensajeDni"></p>
+		</div>
+		<div class="col-md-6">
+			<label for="inputTelefono" class="form-label">Teléfono</label> 
+			<input type="text" class="form-control" name="telefono" id="telefono" maxlength="9">
+			<p id="mensajeError" class="mensajeTelefono"></p>
+		</div>
+		<div class="col-md-6">
+			<label for="inputProvincia" class="form-label">Provincia</label> 
+			<select class="form-select" name="idProvincia" id="provincia"  >
+				<option value="0">Elige Provincia</option>
+			    <option value="1">Álava</option>
+			    <option value="2">Albacete</option>
+			    <option value="3">Alicante</option>
+			    <option value="4">Almería</option>
+			    <option value="5">Asturias</option>
+			    <option value="6">Ávila</option>
+			    <option value="7">Badajoz</option>
+			    <option value="8">Baleares</option>
+			    <option value="9">Barcelona</option>
+			    <option value="10">Burgos</option>
+			    <option value="11">Cáceres</option>
+			    <option value="12">Cádiz</option>
+			    <option value="13">Cantabria</option>
+			    <option value="14">Castellón</option>
+			    <option value="15">Ceuta</option>
+			    <option value="16">Ciudad Real</option>
+			    <option value="17">Córdoba</option>
+			    <option value="18">Cuenca</option>
+			    <option value="19">Girona</option>
+			    <option value="20">Granada</option>
+			    <option value="21">Guadalajara</option>
+			    <option value="22">Guipúzcoa</option>
+			    <option value="23">Huelva</option>
+			    <option value="24">Huesca</option>
+			    <option value="25">Jaén</option>
+			    <option value="26">A Coruña</option>
+			    <option value="27">La Rioja</option>
+			    <option value="28">Las Palmas</option>
+			    <option value="29">León</option>
+			    <option value="30">Lleida</option>
+			    <option value="31">Lugo</option>
+			    <option value="32">Madrid</option>
+			    <option value="33">Málaga</option>
+			    <option value="34">Melilla</option>
+			    <option value="35">Murcia</option>
+			    <option value="36">Navarra</option>
+			    <option value="37">Orense</option>
+			    <option value="38">Palencia</option>
+			    <option value="39">Pontevedra</option>
+			    <option value="40">Salamanca</option>
+			    <option value="41">Segovia</option>
+			    <option value="42">Sevilla</option>
+			    <option value="43">Soria</option>
+			    <option value="44">Tarragona</option>
+			    <option value="45">Tenerife</option>
+			    <option value="46">Teruel</option>
+			    <option value="47">Toledo</option>
+			    <option value="48">Valencia</option>
+			    <option value="49">Valladolid</option>
+			    <option value="50">Vizcaya</option>
+			    <option value="51">Zamora</option>
+			    <option value="52">Zaragoza</option>
+			</select>
+			<p id="mensajeError" class="mensajeProvincia"></p>
+		</div>
+		<div class="col-md-4">
+			<label for="inputFoto" class="form-label">Foto (Opcional)</label> 
+			<input type="file" class="form-control" name="foto" id="foto" >
+		</div>
+		<div class="col-md-2">
+			<label for="inputEdad" class="form-label">Edad</label> 
+			<input type="number" class="form-control" name="edad" id="edad">
+			<p id="mensajeError" class="mensajeEdad"></p>
+		</div>
+		<div class="col-12" style="display: flex;justify-content: space-around;margin-top: 3rem;">
+			<button type="submit" class="btn btn-primary" name="REGISTRARME" style="width:30%;font-size: 1.1rem;">REGISTRARME</button>
+			<a href="index.jsp" class="btn btn-primary" style="width:30%; font-size: 1.1rem;">VOLVER</a>
+		</div>
+	</form>
+</div>
